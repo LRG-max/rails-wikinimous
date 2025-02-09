@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-sm rounded-3 p-4">
+        <div class="card-body">
+
+          <!-- Titre du formulaire -->
+          <h2 class="display-5 fw-semibold text-secondary border-bottom pb-2 mb-4 text-center">
+            ✏️ <%= @article.new_record? ? "Create New Article" : "Edit Article" %>
+          </h2>
+
+          <!-- Formulaire -->
+          <%= form_with model: @article, local: true do |f| %>
+            <div class="mb-3">
+              <%= f.label :title, class: "form-label fw-semibold" %>
+              <%= f.text_field :title, class: "form-control rounded-pill px-3" %>
+            </div>
+
+            <div class="mb-3">
+              <%= f.label :content, class: "form-label fw-semibold" %>
+              <%= f.text_area :content, class: "form-control rounded-3 px-3", rows: 6 %>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+              <%= link_to "🔙 Back", articles_path, class: "btn btn-outline-secondary rounded-pill px-4" %>
+              <%= f.submit @article.new_record? ? "Create Article" : "Update Article", class: "btn btn-success rounded-pill px-4 fw-semibold" %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

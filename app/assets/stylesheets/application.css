@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1020;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.articles-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+
+.new-article-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.new-article-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-danger.btn-outline-soft-danger {
+  color: #cc5c5c;
+  border-color: #cc5c5c;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-outline-danger.btn-outline-soft-danger:hover {
+  background-color: rgba(204, 92, 92, 0.1);
+  box-shadow: 0px 4px 8px rgba(204, 92, 92, 0.2);
+  color: grey
+}
