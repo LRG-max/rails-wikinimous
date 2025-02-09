@@ -4,12 +4,12 @@
       <div class="card border-0 shadow-sm rounded-3 p-4">
         <div class="card-body">
 
-          <!-- Titre du formulaire -->
+
           <h2 class="display-5 fw-semibold text-secondary border-bottom pb-2 mb-4 text-center">
             ✏️ <%= @article.new_record? ? "Create New Article" : "Edit Article" %>
           </h2>
 
-          <!-- Formulaire -->
+
           <%= form_with model: @article, local: true do |f| %>
             <div class="mb-3">
               <%= f.label :title, class: "form-label fw-semibold" %>
